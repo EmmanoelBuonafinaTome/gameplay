@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.background
+    backgroundColor: theme.colors.background,
   },
   image: {
     width: '100%',
-    height: '360',
+    height: 360,
   },
   content: {
     marginTop: -40,

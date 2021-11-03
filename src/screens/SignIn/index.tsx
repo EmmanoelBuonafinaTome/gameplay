@@ -4,7 +4,6 @@ import {
   Text,
   Image,
   StatusBar,
-  Button
 } from 'react-native';
 
 import IllustrationImg from '../../assets/illustration.png';
@@ -20,15 +19,14 @@ export function SignIn() {
         translucent
       />
       <Image 
-        source={IllustrationImg} 
-        style={styles.image}
+        source={IllustrationImg}
         resizeMode='stretch'
+        style={styles.image}
       />
-
       <View style={styles.content}>
         <Text style={styles.title}>
           Organize {`\n`}
-          suas ogatinas {`\n`}
+          suas jogatinas {`\n`}
           facilmente
         </Text>
         <Text style={styles.subtitle}>
