@@ -4,12 +4,19 @@ import {
   Text,
   Image
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import IllustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
+import { AuthStackParamList } from '../../routes/auth.routes';
 import { styles } from './styles';
 
+type SignInNavigationType = NativeStackNavigationProp<AuthStackParamList, "Home">
+
 export function SignIn() {
+  const navigation = useNavigation<SignInNavigationType>();
+
   return (
     <View style={styles.container}>
       <Image 
@@ -28,8 +35,8 @@ export function SignIn() {
           favoritos com seus amigos
         </Text>
         <ButtonIcon 
-          title='Entrar com o discord' 
-          activeOpacity={0.7}
+          title='Entrar com o discord'
+          onPress={() => navigation.navigate('Home')}
         />
       </View>
     </View>
